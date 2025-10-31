@@ -145,6 +145,13 @@ For additional points, write a second data pipeline compatible with Apache Airfl
 
 Be sure that your DAG runs successfully within Airflow when you executed in your AWS EC2 instance. It should produce identical results to your Prefect flow, but the final "platform" message attribute you submit should be set to "airflow".
 
+If you would like to develop and test your Airflow DAG you have two options:
+
+1. Run the EC2 instance we created earlier. CD into the `airflow/` directory and run `docker compose up -d` to bring up Airflow. Within that directory there is a `dags/` directory where you should put your Python DAG(s).
+2. Run Airflow locally using [this repository](https://github.com/uvasds-systems/run-airflow) and instructions. Just as the option above, place your Python DAG(s) in the `dags/` subdirectory to run/test them.
+
+[![Run Airflow](https://s3.amazonaws.com/uvasds-systems/images/run-airflow-youtube.png)](https://www.youtube.com/watch?v=muofVU8gkEQ)
+
 ## Notes / Submission
 
 1. Be sure to fork this repository and commit/push your code back to it for grading.
